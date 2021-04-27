@@ -3,6 +3,7 @@
 	<head>
 		<title>Formulario de registro - Serbatic</title>
 		<link rel="stylesheet" href="estilo_formulario.css">
+		<script src = "codigo_javascript.js"></script>
 	</head>
 	<body>
 		<div>
@@ -45,7 +46,24 @@
 							<label for="fecha_nacimiento">Fecha de Nacimiento</label>
 						</td>
 						<td>
-							<input type="date" id="fecha_nacimiento">
+							<select id="dia">
+								<option value="ALEMANIA">ALEMANIA</option>
+							</select>
+							<select id="mes">
+								<option value="ALEMANIA">ALEMANIA</option>
+							</select>
+							<select id="anho">
+								<option value="ALEMANIA">ALEMANIA</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="dni">DNI</label>
+						</td>
+						<td>
+							<input type="text" id="dni">
+							<input type="text" id="dni_letra" onchange="validarDni()" size="1">
 						</td>
 					</tr>
 				</table>
@@ -96,7 +114,7 @@
 							<label for="direccion">Direcci&oacuten</label>
 						</td>
 						<td>
-							<input type="text" id="direccion">
+							<input type="text" size="55" id="direccion">
 						</td>
 						<td>
 							<label for="codigo_postal">C&oacutedigo postal</label>
@@ -110,7 +128,7 @@
 							<label for="localidad">Localidad</label>
 						</td>
 						<td>
-							<input type="text" id="localidad">
+							<input type="text" size="55" id="localidad">
 						</td>
 						<td>
 							<label for="provincia">Provincia</label>
@@ -207,7 +225,7 @@
 			<input id="terminos" type="checkbox">
 				<label for="terminos">Acepto el acuerdo de servicios, la declaraci&oacuten de privacidad y la declaraci&oacuten de uso de cookies</label>
 				</br>
-				<button id="registrar" type="button">Registrar</button>
+				<button id="registrar" onclick="validarTerminos()" type="button">Registrar</button>
 				<input id="reset" type="reset" value="Limpiar">
 			</div>
 		</form>
