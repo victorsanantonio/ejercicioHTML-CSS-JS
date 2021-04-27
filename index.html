@@ -24,6 +24,13 @@
 						<td>
 							<input type="text" id="nombre">
 						</td>
+						<td>
+							<label for="dni">DNI</label>
+						</td>
+						<td>
+							<input type="text" id="dni">
+							<input type="text" id="dni_letra" size="1">
+						</td>
 					</tr>
 					<tr>
 						<td>
@@ -50,22 +57,46 @@
 								<option value="ALEMANIA">ALEMANIA</option>
 							</select>
 							<select id="mes">
-								<option value="ALEMANIA">ALEMANIA</option>
+								<option value="Enero">Enero</option>
+								<option value="Febrero">Febrero</option>
+								<option value="Marzo">Marzo</option>
+								<option value="Abril">Abril</option>
+								<option value="Mayo">Mayo</option>
+								<option value="Junio">Junio</option>
+								<option value="Julio">Julio</option>
+								<option value="Agosto">Agosto</option>
+								<option value="Septiembre">Septiembre</option>
+								<option value="Octubre">Octubre</option>
+								<option value="Noviembre">Noviembre</option>
+								<option value="Diciembre">Diciembre</option>
 							</select>
 							<select id="anho">
-								<option value="ALEMANIA">ALEMANIA</option>
+								<option value="2000">2000</option>
+								<option value="2001">2001</option>
+								<option value="2002">2002</option>
+								<option value="2003">2003</option>
+								<option value="2004">2004</option>
+								<option value="2005">2005</option>
+								<option value="2006">2006</option>
+								<option value="2007">2007</option>
+								<option value="2008">2008</option>
+								<option value="2009">2009</option>
+								<option value="2010">2010</option>
+								<option value="2011">2011</option>
+								<option value="2012">2012</option>
+								<option value="2013">2013</option>
+								<option value="2014">2014</option>
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2000</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+								<option value="2021">2021</option>
 							</select>
 						</td>
 					</tr>
-					<tr>
-						<td>
-							<label for="dni">DNI</label>
-						</td>
-						<td>
-							<input type="text" id="dni">
-							<input type="text" id="dni_letra" onchange="validarDni()" size="1">
-						</td>
-					</tr>
+						
 				</table>
 			</fieldset>
 			<fieldset>
@@ -120,7 +151,7 @@
 							<label for="codigo_postal">C&oacutedigo postal</label>
 						</td>
 						<td>
-							<input type="text" id="codigo_postal" maxlength="5">
+							<input type="text" id="codigo_postal">
 						</td>
 					</tr>
 					<tr>
@@ -200,7 +231,7 @@
 							<label for="telefono">Tel&eacutefono</label>
 						</td>
 						<td>
-							<input type="text" id="telefono" maxlength="9">
+							<input type="text" id="telefono">
 						</td>
 					</tr>
 					<tr>
@@ -208,7 +239,7 @@
 							<label for="movil">M&oacutevil</label>
 						</td>
 						<td>
-							<input type="text" id="movil" maxlength="9">
+							<input type="text" id="movil">
 						</td>
 					</tr>
 					<tr>
@@ -225,7 +256,7 @@
 			<input id="terminos" type="checkbox">
 				<label for="terminos">Acepto el acuerdo de servicios, la declaraci&oacuten de privacidad y la declaraci&oacuten de uso de cookies</label>
 				</br>
-				<button id="registrar" onclick="validarTerminos()" type="button">Registrar</button>
+				<button id="registrar" onclick="validar()" type="button">Registrar</button>
 				<input id="reset" type="reset" value="Limpiar">
 			</div>
 		</form>
