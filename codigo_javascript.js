@@ -1,6 +1,41 @@
 function validar(){
-	if(dniCorrecto() && longitudesCorrecto() && terminosCorrecto()){
+	if(dniCorrecto() && longitudesCorrecto() && emailCorrecto() && terminosCorrecto()){
 		alert("Usuario registrado correctamente");
+	}
+}
+
+function cambiaDias(){
+	var meses = document.getElementById('mes');
+	var dias = document.getElementById('dia');
+	var i;
+	var arr=1;
+	if(meses.options.namedItem('Febrero')){
+		dias.options.remove(32);
+		dias.options.remove(31);
+		dias.options.remove(30);
+	}
+	else if(meses.options.namedItem('Noviembre') || meses.options.namedItem('Abril') || meses.options.namedItem('Junio') || meses.options.namedItem('Septiembre')){
+		for(i=1; i<=30; i++){
+			arr++;
+		}
+	}
+	else{
+		for(i=1; i<=31; i++){
+			arr++;
+		}
+	}
+	dias.innerHTML = arr;
+}
+
+function emailCorrecto() {
+	var email = document.getElementById('email').value;
+	const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if (regex.test((String(email).toLowerCase()))){
+		alert("La direccion de email " + email + " es correcta.");
+		return true;
+	} else {
+		alert("La dirección de email es incorrecta.");
+		return false;
 	}
 }
 
